@@ -3,12 +3,13 @@ An AI to solve and assist with the Peg Solitaire game using Reinforcement Learni
 
 # Description
 
-Solve [Peg solitaire](https://en.wikipedia.org/wiki/Peg_solitaire)
-using reinforcement learning. The code is written in Python and uses:
+[Peg solitaire](https://en.wikipedia.org/wiki/Peg_solitaire) is a classic single-player board game, played on a board
+with holes filled with pegs, where the objective is to remove all but one peg by jumping them over each
+other. This project aims to achieve the following:
+* Implement a [Deep Q-Network](https://en.wikipedia.org/wiki/Q-learning) to solve different board configurations.
+* Implement a methodology to assist a human playing the game. This would work as the following: The bot and the human take turns; the bot moves first followed by the human. The bot’s aim is to make the optimal move considering the human’s possible moves.
 
-* [PyTorch](https://pytorch.org/)
-* [OpenAI Gym](https://gym.openai.com/)
-* A custom OpenAI Gym environment: [gym-solitaire](https://github.com/taylorjg/gym-solitaire)
+The code is written in Python and uses [PyTorch](https://pytorch.org/)
 
 This code isn't great. It doesn't always seem to converge.
 And even when it does, it is pretty slow to run and can take up to 16,000 episodes
