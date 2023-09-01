@@ -62,9 +62,9 @@ Thus, we look for ways to improve the reward model, and modified the rewards to 
   * Else:
     * If state has valid actions: 2 x 2<sup>16−number of pegs on board</sup>
     * Else : 2<sup>16−number of pegs on board</sup>
-* Classical Board: New reward term =
-Modified Reward + <math>n x \sum_{i=1}^n d_i </math>
-n: the number of
+* Classical Board:
+  * New reward term = Modified Reward + <math>n x \sum_{i=1}^n d_i </math>
+where n: the number of
 empty holes in the board
 •
 d: the distance
