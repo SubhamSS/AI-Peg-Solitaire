@@ -71,8 +71,11 @@ d: the distance
 of the hole from the board’s center
 
 # Results
+
+For 5 x 5 board: 
 <img src="Git images/5_5_train.jpg" width="900">
 
+For 7 x 7 board: 
 <img src="Git images/7_7_train.jpg" width="900">
 
 # Setting up
