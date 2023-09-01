@@ -50,7 +50,7 @@ The below environment details a 4 x 4 board. As we change the board,
 
 # Training plots
 
-![Training plots](4_4_train.jpg)
+<img src="Git images/4_4_train.jpg" width="900">
 
 # Setting up
 
