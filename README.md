@@ -22,7 +22,7 @@ The below environment details a 4 x 4 board. As we change the board,
   * Action space consists of all possible actions (e.g.: 40 for a 4x4 board), but only a few valid at each state
 * Reward: Reward is defined as:
   * 100 if the minimum number of pegs is achieved
-  * Else, Reward = −2^(no of pegs on board)
+  * Else, Reward = −2<sup>(no of pegs on board)</sup>
 
 ## DQN Algorithm
 
@@ -30,9 +30,9 @@ Peg solitaire's discrete actions suit a DQN framework
 
 <b>Objective of DQN</b>: To learn an optimal policy that maximizes the expected discounted sum of
 rewards
+
 While running
-•
-𝑎← argmax 𝑄 𝑠, 𝑎
+* 𝑎 &larr argmax <i>𝑄(𝑠,𝑎)</i>
 • Add 𝑠𝑡,𝑎𝑡,𝑟𝑡,𝑠𝑡+1to memory
 • If len (memory) > batch_size
 •
