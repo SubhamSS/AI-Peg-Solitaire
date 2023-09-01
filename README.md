@@ -27,6 +27,7 @@ The below environment details a 4 x 4 board. As we change the board,
 ## DQN Algorithm
 
 Peg solitaire's discrete actions suit a DQN framework
+
 <b>Objective of DQN</b>: To learn an optimal policy that maximizes the expected discounted sum of
 rewards
 While running
