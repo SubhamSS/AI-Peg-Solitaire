@@ -32,11 +32,11 @@ Peg solitaire's discrete actions suit a DQN framework
 rewards
 
 While running
-* 𝑎 &#8592 argmax <math>𝑄(𝑠,𝑎)</math>
+* 𝑎 ← argmax <math>𝑄(𝑠,𝑎)</math>
 * Add <math>s,a,r</math>,<math>s<sup>'</sup></math> to memory, where <math>s<sup>'</sup></math> = <math>s+a</math>
 * If len (memory) > batch_size
   * Sample batch of <math>𝑠, 𝑎, 𝑟, s<sup>'</sup></math>
-  * 𝑄𝑡𝑎𝑟𝑔𝑒𝑡← 𝑟+ 𝛾 𝑄′ 𝑠
+  * <math>𝑄<sub>target</sub></math> ← <math>r+ 𝛾.𝑄′(𝑠′)</math>
 • 𝑄𝑒𝑥𝑝𝑒𝑐𝑡𝑒𝑑← 𝑄 𝑠
 • ℒ 𝜃))← 𝑄𝑡𝑎𝑟𝑔𝑒𝑡−𝑄𝑒𝑥𝑝𝑒𝑐𝑡𝑒𝑑
 • 𝑄’’← weights closer to 𝑄
