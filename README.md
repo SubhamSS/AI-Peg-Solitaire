@@ -24,7 +24,22 @@ The below environment details a 4 x 4 board. As we change the board,
   * 100 if the minimum number of pegs is achieved
   * Else, Reward = −2^(no of pegs on board)
 
-## Agent details
+## DQN Algorithm
+
+Peg solitaire's discrete actions suit a DQN framework
+<b>Objective of DQN</b>: To learn an optimal policy that maximizes the expected discounted sum of
+rewards
+While running
+•
+𝑎← argmax 𝑄 𝑠, 𝑎
+• Add 𝑠𝑡,𝑎𝑡,𝑟𝑡,𝑠𝑡+1to memory
+• If len (memory) > batch_size
+•
+𝑆𝑎𝑚𝑝𝑙𝑒𝑏𝑎𝑡𝑐ℎ𝑜𝑓𝑠, 𝑎, 𝑟, 𝑠
+• 𝑄𝑡𝑎𝑟𝑔𝑒𝑡← 𝑟+ 𝛾 𝑄′ 𝑠
+• 𝑄𝑒𝑥𝑝𝑒𝑐𝑡𝑒𝑑← 𝑄 𝑠
+• ℒ 𝜃))← 𝑄𝑡𝑎𝑟𝑔𝑒𝑡−𝑄𝑒𝑥𝑝𝑒𝑐𝑡𝑒𝑑
+• 𝑄’’← weights closer to 𝑄
 
 * The neural network approximates the afterstate value function
   * It has 33 inputs and 1 output
