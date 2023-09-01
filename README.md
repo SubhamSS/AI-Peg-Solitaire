@@ -33,16 +33,16 @@ rewards
 
 While running
 * 𝑎 ← argmax <math>𝑄(𝑠,𝑎)</math>
-* Add <math>s,a,r</math>,<math>s<sup>'</sup></math> to memory, where <math>s<sup>'</sup></math> = <math>s+a</math>
+* Add <math>s,a,r</math>,<math>s′</math> to memory, where <math>s′</math> = <math>s+a</math>
 * If len (memory) > batch_size
   * Sample batch of <math>𝑠, 𝑎, 𝑟, s<sup>'</sup></math>
   * <math>𝑄<sub>target</sub></math> ← <math>r+ 𝛾.𝑄′(𝑠′)</math>
   * <math>𝑄<sub>expected</sub></math> ← <math>𝑄(𝑠)</math>
   * <math>ℒ (𝜃)</math> ← ||<math>𝑄<sub>target</sub></math>−<math>𝑄<sub>expected</sub></math>||
-• 𝑄’’← weights closer to 𝑄
+  * <math>𝑄′</math>← weights closer to <math>𝑄</math>
   
 
-# Training plots
+# 4 x 4 plots
 
 <img src="Git images/4_4_train.jpg" width="900">
 
