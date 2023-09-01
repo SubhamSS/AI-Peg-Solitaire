@@ -11,35 +11,18 @@ other. This project aims to achieve the following:
 
 The code is written in Python and uses [PyTorch](https://pytorch.org/)
 
-## Game details
-
-* Number of board positions: 33
-* Number of all possible actions: 76
-  * But, only a small subset of actions are valid in each state
-  * e.g. the initial state has 4 valid actions
-
 ## Environment details
 
 The below environment details a 4 x 4 board. As we change the board, 
 * State: An array of 4 x 4 represents the state.
-  * 0: No peg present in the position
-  * 1: Peg is present in the position
+  * `0`: No peg present in the position
+  * `1`: Peg is present in the position
 * Action: A tuple of size 2 representing the start and end positions
   * Action ((4,2),(2,2)) represents peg from position (4,2) to (2,2) over (3,2)
   * Action space consists of all possible actions (e.g.: 40 for a 4x4 board), but only a few valid at each state
 * Reward: Reward is defined as:
   * 100 if the minimum number of pegs is achieved
   * Else, Reward = −2^(no of pegs on board)
-
-* State/observations:
-  * Are numpy arrays of 33 `0`s/`1`s
-    * `0` for an empty board position
-    * `1` for an occupied board position
-* Rewards:
-  * 0 for all moves except the final move of each episode
-  * Final move of each episode:
-    * +100 if the puzzle is solved correctly i.e. there is a single remaining piece located at the centre of the board
-    * Otherwise, the negative sum of the Manhattan distances (from the centre of the board) of the remaining pieces  
 
 ## Agent details
 
