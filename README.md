@@ -32,7 +32,7 @@ Peg solitaire's discrete actions suit a DQN framework
 rewards
 
 While running
-* 𝑎 &larr argmax <i>𝑄(𝑠,𝑎)</i>
+* 𝑎 &larr argmax <math>𝑄(𝑠,𝑎)</math>
 • Add 𝑠𝑡,𝑎𝑡,𝑟𝑡,𝑠𝑡+1to memory
 • If len (memory) > batch_size
 •
