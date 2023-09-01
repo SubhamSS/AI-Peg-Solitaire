@@ -29,7 +29,7 @@ The below environment details a 4 x 4 board. As we change the board,
   * Action space consists of all possible actions (e.g.: 40 for a 4x4 board), but only a few valid at each state
 * Reward: Reward is defined as:
   * 100 if the minimum number of pegs is achieved
-  * Else, Reward = −2^𝑛𝑢𝑚𝑏𝑒𝑟𝑜𝑓𝑝𝑒𝑔𝑠𝑜𝑛𝑏𝑜𝑎𝑟𝑑
+  * Else, Reward = −2^(no of pegs on board)
 
 * State/observations:
   * Are numpy arrays of 33 `0`s/`1`s
