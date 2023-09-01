@@ -22,14 +22,14 @@ The code is written in Python and uses [PyTorch](https://pytorch.org/)
 
 The below environment details a 4 x 4 board. As we change the board, 
 * State: An array of 4 x 4 represents the state.
- * 0: No peg present in the position
- * 1: Peg is present in the position
+  * 0: No peg present in the position
+  * 1: Peg is present in the position
 * Action: A tuple of size 2 representing the start and end positions
- * Action ((4,2),(2,2)) represents peg from position (4,2) to (2,2) over (3,2)
- * Action space consists of all possible actions (e.g.: 40 for a 4x4 board), but only a few valid at each state
+  * Action ((4,2),(2,2)) represents peg from position (4,2) to (2,2) over (3,2)
+  * Action space consists of all possible actions (e.g.: 40 for a 4x4 board), but only a few valid at each state
 * Reward: Reward is defined as:
- * 100 if the minimum number of pegs is achieved
- * Else, Reward = −2^𝑛𝑢𝑚𝑏𝑒𝑟𝑜𝑓𝑝𝑒𝑔𝑠𝑜𝑛𝑏𝑜𝑎𝑟𝑑
+  * 100 if the minimum number of pegs is achieved
+  * Else, Reward = −2^𝑛𝑢𝑚𝑏𝑒𝑟𝑜𝑓𝑝𝑒𝑔𝑠𝑜𝑛𝑏𝑜𝑎𝑟𝑑
 
 * State/observations:
   * Are numpy arrays of 33 `0`s/`1`s
