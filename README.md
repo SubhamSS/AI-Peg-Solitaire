@@ -13,7 +13,7 @@ The code is written in Python and uses [PyTorch](https://pytorch.org/)
 
 ## Environment details
 
-The below environment details a 4 x 4 board. As we change the board, 
+The below environment details a 4 x 4 board. As we change the board to higher dimensions, the State and Actions remain similar (with only changing in dimensions), while Rewards are modeled differently, which will be discussed later. 
 * State: An array of 4 x 4 represents the state.
   * `0`: No peg present in the position
   * `1`: Peg is present in the position
@@ -66,6 +66,32 @@ While running
 # Training plots
 
 <img src="Git images/4_4_train.jpg" width="900">
+
+# Higher Dimensional Boards
+
+As we increase the board dimensions, the number of possible board configurations increases exponentially with the number of pegs, making it challenging to explore and learn from all possible states
+
+Further, the reward for a particular move is not immediately
+evident ,and the agent may have to make a series of moves to reach a desirable state.
+This can make it difficult for the agent to learn an optimal policy, as it needs to consider
+the long term consequences of its actions.
+
+Thus, we look for ways to improve the reward model, and modified the rewards to the following:
+<img style="float: right;" src="Git images/4_4_train.jpg">
+* 5 x 5  Board: Added extra Reward to states which have valid actions:
+  * 10<sup>8</sup>if the minimum number of pegs is achieved
+  * Else:
+    * If state has valid actions: 2 x 2<sup>16−number of pegs on board</sup>
+    * Else : 2<sup>16−number of pegs on board</sup>
+* Classical Board: New reward term =
+Modified Reward +
+𝑛∗σ 𝑖=1𝑛𝑑𝑖
+•
+n: the number of
+empty holes in the board
+•
+d: the distance
+of the hole from the board’s center
 
 # Setting up
 
