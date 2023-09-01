@@ -40,28 +40,7 @@ While running
 • 𝑄𝑒𝑥𝑝𝑒𝑐𝑡𝑒𝑑← 𝑄 𝑠
 • ℒ 𝜃))← 𝑄𝑡𝑎𝑟𝑔𝑒𝑡−𝑄𝑒𝑥𝑝𝑒𝑐𝑡𝑒𝑑
 • 𝑄’’← weights closer to 𝑄
-
-* The neural network approximates the afterstate value function
-  * It has 33 inputs and 1 output
   
-## Training loop details  
-
-* episodes loop:
-  * reset env
-  * env steps loop:
-    * evaluate valid actions for the current state
-      * get the valid actions from the env (not standard Gym behaviour)
-      * figure out the next board state for each valid action
-      * push all the next board states through the neural network to predict the afterstate values
-    * use the policy to choose an action
-      * with epsilon prob: random choice
-      * with (1 - epsilon) prob: greedy choice i.e. choose the action with the highest afterstate value estimate
-    * step the env with the chosen action
-    * calculate the target afterstate value for the current state based on the reward from the env
-    added to the discounted estimate of the value for the afterstate resulting from taking the action
-    * calculate the loss i.e. the difference between the current estimate of the afterstate
-    value of the current state and the calculated target value
-    * back propagate the loss  
 
 # Training plots
 
