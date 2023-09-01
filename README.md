@@ -72,11 +72,13 @@ of the hole from the board’s center
 
 # Results
 
-For 5 x 5 board: 
+For 5 x 5 board, results after 1000 iterations: 
 <img src="Git images/5_5_train.jpg" width="900">
 
-For 7 x 7 board: 
+For 7 x 7 board, results after 4000 iterations: 
 <img src="Git images/7_7_train.jpg" width="900">
+
+# Assisting Human Model
 
 # Setting up
 
