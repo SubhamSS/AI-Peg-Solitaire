@@ -37,8 +37,8 @@ While running
 * If len (memory) > batch_size
   * Sample batch of <math>𝑠, 𝑎, 𝑟, s<sup>'</sup></math>
   * <math>𝑄<sub>target</sub></math> ← <math>r+ 𝛾.𝑄′(𝑠′)</math>
-• 𝑄𝑒𝑥𝑝𝑒𝑐𝑡𝑒𝑑← 𝑄 𝑠
-• ℒ 𝜃))← 𝑄𝑡𝑎𝑟𝑔𝑒𝑡−𝑄𝑒𝑥𝑝𝑒𝑐𝑡𝑒𝑑
+  * <math>𝑄<sub>expected</sub></math> ← <math>𝑄(𝑠)</math>
+  * <math>ℒ (𝜃)</math> ← ||<math>𝑄<sub>target</sub></math>−<math>𝑄<sub>expected</sub></math>||
 • 𝑄’’← weights closer to 𝑄
   
 
