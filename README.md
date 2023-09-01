@@ -11,18 +11,6 @@ other. This project aims to achieve the following:
 
 The code is written in Python and uses [PyTorch](https://pytorch.org/)
 
-This code isn't great. It doesn't always seem to converge.
-And even when it does, it is pretty slow to run and can take up to 16,000 episodes
-to start solving the puzzle convincingly.
-
-Nonetheless, this is my first attempt at solving a problem using reinforcement learning so I'm
-pretty happy with it and have learnt at lot. But I will continue to experiment in an effort to
-find an implementation that is quicker and more stable. 
-
-# How it works  
-
-These are just some rough notes for now.
-
 ## Game details
 
 * Number of board positions: 33
@@ -31,6 +19,20 @@ These are just some rough notes for now.
   * e.g. the initial state has 4 valid actions
 
 ## Environment details
+
+The below environment details a 4 x 4 board. As we change the board, 
+* State
+An array of 4 x 4 represents the state.
+ * 0: No peg present in the position
+ * 1: Peg is present in the position
+* Action
+A tuple of size 2 representing the start and end positions
+ * Action ((4,2),(2,2)) represents peg from position (4,2) to (2,2) over (3,2)
+ * Action space consists of all possible actions (e.g.: 40 for a 4x4 board), but only a few valid at each state
+* Reward:
+Reward is defined as:
+ * 100 if the minimum number of pegs is achieved
+ * Else, Reward = −2^𝑛𝑢𝑚𝑏𝑒𝑟𝑜𝑓𝑝𝑒𝑔𝑠𝑜𝑛𝑏𝑜𝑎𝑟𝑑
 
 * State/observations:
   * Are numpy arrays of 33 `0`s/`1`s
