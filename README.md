@@ -78,51 +78,6 @@ For 5 x 5 board, results after 1000 iterations:
 For 7 x 7 board, results after 4000 iterations: 
 <img src="Git images/7_7_train.jpg" width="900">
 
-# Assisting Human Model
-
-# Setting up
-
-I'm pretty new to Python and Conda etc. but I think the following should do it:
-
-```
-conda env create -f environment.yml
-conda develop ../gym-solitaire
-```
-
-This assumes that you have cloned [gym-solitaire](https://github.com/taylorjg/gym-solitaire) into `../gym-solitaire`. 
-
-# Play
-
-The following command will load a previously trained model and play a single episode of Solitaire:
-
-```
-python td_solitaire.py --play
-actions: [44, 69, 65, 28, 57, 65, 73, 41, 74, 8, 17, 27, 0, 32, 66, 47, 33, 71, 58, 4, 0, 56, 30, 15, 49, 11, 20, 54, 24, 13, 7]
-  ...
-  ...
-.......
-...X...
-.......
-  ...
-  ...
-```
-
-# Train
-
-The following command will train a model and, if successful, save the trained model to `td_solitaire.pt`:
-
-```
-python td_solitaire.py
-```
-
-# Links
-
-* [Peg solitaire](https://en.wikipedia.org/wiki/Peg_solitaire)
-* I created a custom [OpenAI Gym](https://gym.openai.com/) environment: 
-  * [gym-solitaire](https://github.com/taylorjg/gym-solitaire)
-  * [How to create new environments for Gym](https://github.com/openai/gym/blob/master/docs/creating-environments.md)  
-* I have done a lot of reading about reinforcement learning but I found the following to be particularly helpful:
-  * [_Reinforcement Learning: An Introduction_](http://incompleteideas.net/book/the-book.html) by Richard S. Sutton
 and Andrew G. Barto
     * Chapter 6 _Temporal-Difference Learning_
       * Especially Section 6.8 _Games, Afterstates, and Other Special Cases_
