@@ -1,4 +1,4 @@
-# AI-Peg-Solitaire (In Progress)
+# AI-Peg-Solitaire
 An AI to solve and assist with the Peg Solitaire game using Reinforcement Learning
 
 # Description
