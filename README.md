@@ -78,11 +78,3 @@ For 5 x 5 board, results after 1000 iterations:
 For 7 x 7 board, results after 4000 iterations: 
 <img src="Git images/7_7_train.jpg" width="900">
 
-and Andrew G. Barto
-    * Chapter 6 _Temporal-Difference Learning_
-      * Especially Section 6.8 _Games, Afterstates, and Other Special Cases_
-    * Section 16.1 _TD-Gammon_
-    * [Full Pdf](http://incompleteideas.net/book/RLbook2020.pdf)
-  * [Reinforcement Learning in the Game of Othello:
-Learning Against a Fixed Opponent
-and Learning from Self-Play](https://www.ai.rug.nl/~mwiering/GROUP/ARTICLES/paper-othello.pdf)
